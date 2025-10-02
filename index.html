@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DevOps Test Page</title>
+	<style>
+		body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+		.container { max-width: 600px; margin: 40px auto; background: #fff; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+		h1 { color: #2c3e50; }
+		button { background: #3498db; color: #fff; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; font-size: 16px; }
+		button:hover { background: #217dbb; }
+		#output { margin-top: 24px; font-size: 18px; color: #27ae60; }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Welcome to DevOps Test Page</h1>
+		<p>This is a random HTML page for testing your DevOps pipeline.</p>
+		<button onclick="showMessage()">Click Me!</button>
+		<div id="output"></div>
+	</div>
+	<script>
+		function showMessage() {
+			const messages = [
+				'DevOps is awesome!',
+				'CI/CD pipeline triggered!',
+				'Deployment successful!',
+				'Hello from your test page!',
+				'Everything is working!'
+			];
+			const msg = messages[Math.floor(Math.random() * messages.length)];
+			document.getElementById('output').textContent = msg;
+		}
+	</script>
+</body>
+</html>
